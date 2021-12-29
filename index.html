@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <title>Replace With Alphabet Position</title>
+  </head>
+  <body>
+    <div>
+      <div class="header">
+        <h1 class="title">Replace With Alphabet Position</h1>
+      </div>
+      <div class="body-container">
+        <div class="problem-set">
+          <div class="section-title-container">
+            <div class="nav-bar">
+              <div class="tab active problem-tab">
+                <h4 class="section-title">Problem Set</h4>
+              </div>
+              <div class="tab solution-tab border-left bg-orange">
+                <h4 class="section-title">Solution</h4>
+              </div>
+              <div class="empty-section bg-orange"></div>
+            </div>
+            <div class="text-container">
+              <div class="problem-text">
+                <brShould>
+                  <h4>Welcome.</h4>
+                  <br />
+                  <br />
+                  In this kata you are required to, given a string, replace
+                  every letter with its position in the alphabet.
+                  <br />
+                  <br />
+                  If anything in the text isn't a letter, ignore it and don't
+                  return it.
+                  <br />
+                  <br />
+                  "a" = 1, "b" = 2, etc.
+                  <br /> 
+                  <br />
+                  <h4>Example</h4>
+                  <br/>
+                  <br />
+                  alphabetPosition("The sunset sets at twelve o'
+                  clock.") 
+                  </br>
+                  </br>
+                Should return "20 8 5 19 21 14 19 5 20 19 5 20 19 1
+                  20 20 23 5 12 22 5 15 3 12 15 3 11" (as a string)
+                </p>
+              </div>
+              <p class="solution-text hide">
+                function wave(str){
+                <br /><span class="indent">let newArray = [];</span> <br /><span
+                  class="indent"
+                  >let upperCaseIndex = 0;</span
+                >
+                <br /><span class="indent">let blankSpace = 0;</span>
+                <br /><span class="indent-2x">
+                  for(let x = 0; x < str.length; x++) {</span
+                >
+                <br /><span class="indent-2x">waveArray.push(str);</span>
+                <br /><span class="indent-2x">}</span> <br /><span
+                  class="indent-2x"
+                  >for(let x = 0; x < waveArray.length; x++) {</span
+                >
+                <br /><span class="indent-3x">
+                  let word = waveArray[x].split("");</span
+                >
+                <br /><span class="indent-3x"
+                  >let upperCaseLetter =
+                  word[upperCaseIndex].toUpperCase();</span
+                >
+                <br /><span class="indent-3x"> if(word[x] === " "){</span>
+                <br /><span class="indent-3x">upperCaseIndex++</span>
+                <br /><span class="indent-3x"> } else {</span> <br /><span
+                  class="indent-3x"
+                >
+                  upperCaseIndex++</span
+                >
+                <br /><span class="indent-3x"
+                  >word.splice(x,1,upperCaseLetter)</span
+                >
+                <br /><span class="indent-3x"
+                  >newArray.push(word.toString().replace(/,/g,''))</span
+                >
+                <br /><span class="indent-3x"> } </span> <br /><span
+                  class="indent-2x"
+                >
+                  }</span
+                >
+                <br /><span class="indent">return newArray;</span> <br /><span
+                  class="indent"
+                  >}</span
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="input-output-container">
+          <div class="input-container">
+            <div class="input-output-bar">
+              <div class="section-title-container">
+                <h4 class="section-title bg-orange">Input</h4>
+              </div>
+            </div>
+            <textarea class="bg-grey"></textarea>
+            <div class="button-wrapper"><button>Submit</button></div>
+          </div>
+          <div class="output-container">
+            <div class="input-output-bar">
+              <div class="section-title-container">
+                <h4 class="section-title bg-orange">Output</h4>
+              </div>
+            </div>
+            <div class="output-text"></div>
+          </div>
+        </div>
+      </div>
+      <div class="popup hide">
+        <div class="close-button-container">
+          <button class="close-button"><p>X</p></button>
+        </div>
+        <p class="popup-text">
+          Please make sure the textbox is not empty and your text only contains
+          letters
+        </p>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
